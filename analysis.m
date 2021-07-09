@@ -7,17 +7,17 @@ delta = 0.01;
 eps = 0.01;
 j = 1;
 
-a1 =0.5; 
+a1 =0.0; 
 while a1 <= 1
-    a2=0.7;
+    a2=0.0;
     while a2 <= 1
-       b1=0.7;
+       b1=0.0;
        while b1 <= 1
-           b2=0.1;
+           b2=0.0;
            while b2 <= 1
-               T1=0.2;
+               T1=0.0;
                while T1 <= 1
-                   T2=0.7;
+                   T2=0.0;
                    while T2 <= 1
                        ro=1;
                        while ro <= 10
@@ -38,8 +38,8 @@ while a1 <= 1
                                if ~isnan(x1(n-1))&& ~isnan(x2(n-1))
                                    if x1(n-1) >= 0 && x2(n-1) >= 0
                                         if abs((x1(n-1)/x2(n-1))-ro) <= eps
-                                            if (x1(n-1) - ro*x2(n-1) + d) <= 100
-                                                fprintf ('Ñèñòåìà óñòîé÷èâà! (ðåøåíèå ¹%f)\na1 = %f, a2 = %f\nb1 = %f, b2 = %f\nT1 = %f, T2 = %f\nro = %f, d = %f\n',j,a1,a2,b1,b2,T1,T2,ro,d)
+                                            if (x1(n-1) - ro*x2(n-1) + d) <= 0.1
+                                                fprintf (' Ð£ÑÑ‚Ð¾Ð¹Ñ‡Ð¸Ð²Ð¾Ðµ Ñ€ÐµÑˆÐµÐ½Ð¸Ðµ (Ñ€ÐµÑˆÐµÐ½Ð¸Ðµ â„–%f)\na1 = %f, a2 = %f\nb1 = %f, b2 = %f\nT1 = %f, T2 = %f\nro = %f, d = %f\n',j,a1,a2,b1,b2,T1,T2,ro,d)
                                                 j = j + 1;
                                             end
                                         end
